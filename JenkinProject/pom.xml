@@ -6,4 +6,19 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Archetype - JenkinProject</name>
   <url>http://maven.apache.org</url>
+  <dependencies>
+  <dependency>
+  <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.13</version>
+    <scope>test</scope>
+  </dependency>
+  
+  	<dependency>
+    <groupId>com.beust</groupId>
+    <artifactId>jcommander</artifactId>
+    <version>1.27</version>
+    
+</dependency>
+  </dependencies>
 </project>
