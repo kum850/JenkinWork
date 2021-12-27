@@ -13,6 +13,7 @@ public class AssertionTestExample {
 	@Test
 	public void test1() {
 		Assert.assertTrue(false);
+		
 	}
 
 }
