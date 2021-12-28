@@ -1,19 +1,26 @@
 package com.jay.selenium;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchChrome {
 
+	public static final Logger logger = Logger.getLogger(LaunchChrome.class);
+
 	public static void main(String[] args) throws InterruptedException {
-		
-		System.setProperty("webdriver.chrome.driver","F:\\2022_Study\\Chrome driver\\chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
+
+		String configFileName = "C:\\Users\\Jayprakash\\git\\repository2\\JenkinProject\\log4j.properties";
+		PropertyConfigurator.configure(configFileName);
+		System.setProperty("webdriver.chrome.driver", "F:\\2022_Study\\Chrome driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
-		System.out.println(driver.getTitle());
+		logger.info("Title " + driver.getTitle());
+		logger.info("new message");
 		driver.manage().window().maximize();
-		Thread.sleep(10000);
 		driver.close();
+
 	}
 
 }
